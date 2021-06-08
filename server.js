@@ -13,6 +13,9 @@ dotenv.config({ path: './config/config.env' })
 // Connect to database
 connectDB()
 
+//Route files
+const urls = require('./routes/urlRoutes')
+
 const app = express()
 
 // Body Parser
@@ -24,6 +27,9 @@ app.get('/api', (req, res) => {
         message: 'Hello World!'
     })
 })
+
+// Mount routers
+app.use('/api', urls)
 
 //Use error Middleware
 app.use(notFound)

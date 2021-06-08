@@ -1,5 +1,5 @@
 const validUrl = require('valid-url')
-const shortid = require('shortid')
+const shortid = require('short-id')
 const Url = require('../models/UrlModel')
 
 // @route    POST /api/url/shorten
